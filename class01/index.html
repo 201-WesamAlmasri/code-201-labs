@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border: 5px solid grey;
+        }
+
+        h2{
+          text-align: center;
+          background-color: blueviolet;  
+          color: cornsilk;
+          padding: 5px;
+          border: 3px solid grey;
+        }
+
+        p{
+            font-size: 20px;
+            padding: 5px;
+            margin-bottom: 5px;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Class 1 Lab</h1>
+        <h2>Body Mass Index (BMI)</h2>
+        <p style="background-color: black; color: hotpink;">What is your name?</p>
+        <p style="background-color: green; color: yellow;">What is your gender?</p>
+        <p style="background-color:red; color: skyblue;">What is your weight?</p>
+        <p style="background-color: blue; color: wheat;">What is your height?</p>
+    </main>
+    <footer>
+
+    </footer>
+    
+    <script>
+        let name = prompt("Enter your name please").toLowerCase();
+        console.log("The user name ----> ", name);
+
+        let gender = prompt("Enter your gender 'male' or 'female'").toLowerCase();
+        console.log("The user gender ----> ", gender);
+
+        let weight = prompt("Enter your weight in in Kg");
+        console.log("The user weight ----> ", weight);
+
+        let height = prompt("Enter your height in in m");
+        console.log("The user height ----> ", height);
+
+        let bmi = weight / (height * height);
+        console.log("The user BMI ----> ", bmi);
+
+        let result;
+
+        if(bmi <= 18.5){
+            result = "Underweight";
+        }else if(bmi > 18.5 && bmi <= 24.9){
+            result = "Normal healthy weight";
+        }else if(bmi > 24.9 && bmi <= 29.9){
+            result = "Overweight";
+        }else if(bmi > 29.9 && bmi <= 39.9){
+            result = "Obese";
+        }else if(bmi > 39.9){
+            result = "Morbidly obese";
+        }
+
+        alert(
+            "Hello " + name + " your body mass index (BMI) is " + bmi + " , and upon your gender (" + gender + ") ,your weight " + weight + " Kg and your height " + height + " m, this means that you are " + result 
+        );
+    </script>
+</body>
+</html>
